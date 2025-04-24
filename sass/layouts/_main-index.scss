@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.fullwdw {
+    padding-top: 12.5rem;
+    box-sizing: border-box;
+}
+main {
+    h1 {
+        font-family: 'Poppins';
+        color: map-get($colores,claro);
+        text-shadow: -1px -1px 0 map-get($colores,oscuro), 1px -1px 0 map-get($colores,oscuro), -1px 1px 0 map-get($colores,oscuro), -1px -1px 0 map-get($colores,oscuro);
+        text-align: justify;
+        font-size: 3.125rem;
+        width: 40%;
+    }
+    h2 {
+        font-family: 'Poppins';
+    font-size: 2.5rem;
+    margin: 0 2.5rem 1.25rem;
+    color: map-get($colores,claro);
+    text-shadow: -1px -1px 0 map-get($colores,oscuro), 1px -1px 0 map-get($colores,oscuro), -1px 1px 0 map-get($colores,oscuro), -1px -1px 0 map-get($colores,oscuro);
+    }
+    #titulo {
+        padding: 20% 0% 10% 10%;
+    }
+    #sliders {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+        justify-items: center;
+
+            article:first-child {
+            font-family: 'Poppins';
+            font-weight: 500;
+            width: 70%;
+            text-align: justify;
+            background: $fondoopacidad;
+            color: map-get($colores,claro);
+            padding: 1.875rem;
+        }
+        img {
+            width: 80%;
+            border: 2px solid map-get($colores,claro);
+            height: 60%;
+            opacity: .9;
+        }
+    }
+    .gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.9375rem;
+        align-items: center;
+        justify-items: center;
+    }
+}

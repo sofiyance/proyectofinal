@@ -1,0 +1,51 @@
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        max-width: 1024px;
+        .title {
+            font-size: 1.75rem;
+            -webkit-text-stroke: 1px var(--claro);
+        }
+        .links a {
+            font-size: 0.75rem;
+            margin: 0;
+        }
+    }
+    .fullwdw:nth-child(2) {
+        padding: 70px 10px 10px 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    main {
+        h1 {
+            font-size: 1.5rem;
+            width: 100%;
+        }
+        #sliders {
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+            article:first-child {
+                font-size: 0.75rem;
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    }
+    footer {
+        max-width: 1024px;
+    }
+    section.caja1 {
+        flex-direction: column!important;
+    }
+    section.caja2 {
+        flex-direction: column-reverse!important;
+        margin-top: 1.25rem;
+    }
+    .caja1 #texto, .caja2 #texto {
+        width: 70%!important;
+    }
+    article#imagen {
+        width: 50%!important;
+    }
+}

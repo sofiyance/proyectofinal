@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+body {
+    background-color: map-get($colores,claro);
+    min-height: 100vh;
+    position: relative;
+    a {
+        text-decoration: none;
+        cursor: crosshair;
+    }
+}
+img, video, svg {
+    height: auto;
+    max-width: 100%;
+}

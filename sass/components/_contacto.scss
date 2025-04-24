@@ -1,0 +1,104 @@
+section#contacto {
+    padding: 12.5rem 5%;
+    min-height: 90vh;
+    .gridcontacto {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        .texto {
+            width: 50%;
+            background: $fondoopacidad;
+            color: map-get($colores,claro);
+            font-family: 'Poppins';
+            font-size: .875rem;
+            padding: 1.25rem;
+            text-align: justify;
+            img {
+                width: 10%;
+            }
+            span {
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 1.5625rem;
+            }
+            article {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3.125rem;
+                &:first-of-type {
+                    margin-bottom: 1.875rem;
+                }
+            }
+        }
+        .formulario {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            background: $fondoopacidad;
+            padding: 1.25rem;
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 2fr;
+                gap: 15px;
+                grid-template-areas:
+                    "nombre mail"
+                    "texto texto"
+                    "boton boton";
+                    #name { 
+                        grid-area: nombre; 
+                        label {
+                            color: map-get($colores,claro);
+                            font-family: 'share tech mono';
+                            text-transform: uppercase;
+                            font-size: .75rem;
+                        }
+                    }
+                    #mail { 
+                        grid-area: mail; 
+                        label {
+                            color: map-get($colores,claro);
+                            font-family: 'share tech mono';
+                            text-transform: uppercase;
+                            font-size: .75rem;
+                        }
+                    }
+                    #mensaje { 
+                        grid-area: texto; 
+                        label {
+                            display: none;
+                        }
+                    }
+                    #boton { 
+                        grid-area: boton; 
+                        button {
+                            width: 100%;
+                            font-family: 'Share Tech Mono';
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            padding: 2px;
+                            background: map-get($colores,claro);
+                            border: none;
+                        }
+                    }
+                    input {
+                        background: map-get($colores,acento);
+                        border: none;
+                        font-family: 'Poppins';
+                        font-size: 12px;
+                        padding: 0px 5px;
+                    }
+                    textarea {
+                        width: 37.5rem!important;
+                        background: map-get($colores,acento);
+                        border: none;
+                        font-family: 'Poppins';
+                        font-size: 12px;
+                    }
+            }
+        }
+    }
+}

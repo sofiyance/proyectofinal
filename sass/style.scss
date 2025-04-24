@@ -1,0 +1,22 @@
+@import "./utilities/variables";
+@import "./utilities/mapas";
+
+@import "./base/reset";
+
+@import "./layouts/header";
+@import "./layouts/main-index";
+@import "./layouts/footer";
+
+@import "./components/video";
+@import "./components/destinos";
+@import "./components/precios";
+@import "./components/contacto";
+@import "./components/nosotros";
+
+@import "./layouts/mediaQ/media1440";
+@import "./layouts/mediaQ/media1024";
+@import "./layouts/mediaQ/media992";
+@import "./layouts/mediaQ/media768";
+@import "./layouts/mediaQ/media425";
+@import "./layouts/mediaQ/media375";
+@import "./layouts/mediaQ/media320";
