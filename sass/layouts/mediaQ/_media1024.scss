@@ -1,14 +1,47 @@
 @media (max-width: 1024px) {
     header {
-        flex-direction: column;
         max-width: 1024px;
         .title {
-            font-size: 1.75rem;
+            font-size: 3rem;
             -webkit-text-stroke: 1px var(--claro);
         }
-        .links a {
-            font-size: 0.75rem;
-            margin: 0;
+        .burgeropen, .burgerclose {
+            display: block;
+            border: 0;
+            font-size: 1.25rem;
+            background-color: transparent;
+            color: map-get($colores,acento);
+            cursor: crosshair;
+        }
+        .links.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .links {
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            position: absolute;
+            top: 115px;
+            padding: 20px;
+            right: 5px;
+            -webkit-backdrop-filter: blur(1.5px);
+            backdrop-filter: blur(1.5px);
+            border: 1px solid #353535;
+            background-color: rgba(21, 21, 21, 0.5);
+            gap: 1rem;
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                gap: 5px;
+            }
+            a {
+                font-size: 0.75rem;
+                margin: 0;
+            }
         }
     }
     .fullwdw:nth-child(2) {

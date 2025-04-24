@@ -43,6 +43,8 @@ header {
     color: #ddd;
     -webkit-text-stroke: 2px #ddd;
     white-space: nowrap; }
+  header .burgeropen, header .burgerclose {
+    display: none; }
   header .links li {
     display: inline;
     text-transform: uppercase;
@@ -447,14 +449,43 @@ section#nosotros {
 
 @media (max-width: 1024px) {
   header {
-    flex-direction: column;
     max-width: 1024px; }
     header .title {
-      font-size: 1.75rem;
+      font-size: 3rem;
       -webkit-text-stroke: 1px var(--claro); }
-    header .links a {
-      font-size: 0.75rem;
-      margin: 0; }
+    header .burgeropen, header .burgerclose {
+      display: block;
+      border: 0;
+      font-size: 1.25rem;
+      background-color: transparent;
+      color: #6fcbda;
+      cursor: crosshair; }
+    header .links.visible {
+      opacity: 1;
+      visibility: visible; }
+    header .links {
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      position: absolute;
+      top: 115px;
+      padding: 20px;
+      right: 5px;
+      -webkit-backdrop-filter: blur(1.5px);
+      backdrop-filter: blur(1.5px);
+      border: 1px solid #353535;
+      background-color: rgba(21, 21, 21, 0.5);
+      gap: 1rem; }
+      header .links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 5px; }
+      header .links a {
+        font-size: 0.75rem;
+        margin: 0; }
   .fullwdw:nth-child(2) {
     padding: 70px 10px 10px 10px;
     align-items: center;
@@ -505,6 +536,10 @@ section#nosotros {
 @media (max-width: 425px) {
   header {
     max-width: 425px; }
+    header .title {
+      font-size: 2rem; }
+    header .links {
+      top: 95px; }
   footer {
     max-width: 425px; }
   .links a {
@@ -513,10 +548,14 @@ section#nosotros {
 @media (max-width: 375px) {
   header {
     max-width: 375px; }
+    header .title {
+      font-size: 1rem; }
+    header .links {
+      top: 75px; }
   footer {
     max-width: 375px; } }
 
-@media (max-width: 20rem) {
+@media (max-width: 320px) {
   header {
     max-width: 20rem; }
   footer {

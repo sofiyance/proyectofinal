@@ -19,6 +19,9 @@ header {
         -webkit-text-stroke: 2px map-get($colores,claro);
         white-space: nowrap;
     }
+    .burgeropen, .burgerclose {
+        display: none;
+    }
     .links {
         li {
             display: inline;

@@ -1,6 +1,12 @@
 @media (max-width: 425px) {
     header {
         max-width: 425px;
+        .title {
+            font-size: 2rem;
+        }
+        .links {
+            top: 95px;
+        }
     }
     footer {
         max-width: 425px;
