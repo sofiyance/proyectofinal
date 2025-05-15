@@ -1,6 +1,6 @@
 section#nosotros {
     min-height: 90vh;
-    padding-bottom: 6.25rem;
+    padding: 12.5rem 5%;
     .gridnosotros {
         display: flex;
         flex-direction: column;
@@ -12,7 +12,7 @@ section#nosotros {
             flex-direction: row;
             gap: 1.25rem;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
             #texto {
                 width: 30%;
                 background: $fondoopacidad;
@@ -25,12 +25,18 @@ section#nosotros {
                 backdrop-filter: blur(1.5px);
             }
             #imagen {
-                width: 30%;
-                max-width: 500px;
-                max-height: 333px;
+                width: 30%;    
+                display: flex;
+                align-items: stretch;
                 opacity: .9;
                 overflow: hidden;     
                 outline: 2px solid map-get($colores,claro);
+                > img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                }
             }
         }
     }

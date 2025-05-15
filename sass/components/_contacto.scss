@@ -7,14 +7,20 @@ section#contacto {
         align-items: center;
         justify-content: center;
         gap: 1.25rem;
+        height: 21.875rem;
         .texto {
             width: 50%;
-            background: $fondoopacidad;
-            color: map-get($colores,claro);
+            background: rgba(21, 21, 21, 0.5);
+            color: #ddd;
             font-family: 'Poppins';
-            font-size: .875rem;
             padding: 1.25rem;
             text-align: justify;
+            height: 100%;
+            font-size: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
             img {
                 width: 10%;
             }
@@ -39,6 +45,7 @@ section#contacto {
             justify-content: center;
             background: $fondoopacidad;
             padding: 1.25rem;
+            height: 100%;
             form {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -49,7 +56,9 @@ section#contacto {
                     "texto texto"
                     "boton boton";
                     #name { 
-                        grid-area: nombre; 
+                        grid-area: nombre;
+                        display: flex;
+                        align-items: center;
                         label {
                             color: map-get($colores,claro);
                             font-family: 'share tech mono';
@@ -59,6 +68,9 @@ section#contacto {
                     }
                     #mail { 
                         grid-area: mail; 
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
                         label {
                             color: map-get($colores,claro);
                             font-family: 'share tech mono';
@@ -82,10 +94,11 @@ section#contacto {
                             padding: 2px;
                             background: map-get($colores,claro);
                             border: none;
+                            cursor: pointer;
                         }
                     }
                     input {
-                        background: map-get($colores,acento);
+                        background: map-get($colores,claro);
                         border: none;
                         font-family: 'Poppins';
                         font-size: 12px;
@@ -93,10 +106,12 @@ section#contacto {
                     }
                     textarea {
                         width: 37.5rem!important;
-                        background: map-get($colores,acento);
+                        background: map-get($colores,claro);
                         border: none;
                         font-family: 'Poppins';
                         font-size: 12px;
+                        height: 100%;
+                        padding: .625rem;
                     }
             }
         }

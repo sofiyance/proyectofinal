@@ -12,9 +12,15 @@ input, button, textarea, select {
   font: inherit; }
 
 body {
-  background-color: #ddd;
+  background-color: #525252;
+  background-image: url(../../assets/bodybckgrd.jpg);
   min-height: 100vh;
-  position: relative; }
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: exclusion; }
   body a {
     text-decoration: none;
     cursor: crosshair; }
@@ -114,7 +120,11 @@ main #sliders {
     text-align: justify;
     background: rgba(21, 21, 21, 0.5);
     color: #ddd;
-    padding: 1.875rem; }
+    padding: 1.875rem;
+    min-height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   main #sliders img {
     width: 80%;
     border: 2px solid #ddd;
@@ -271,7 +281,8 @@ section#destinos {
         bottom: 0rem; }
 
 section#precios {
-  min-height: 90vh; }
+  min-height: 90vh;
+  padding: 12.5rem 5%; }
   section#precios .gridtable {
     gap: 1.25rem 3.125rem;
     padding: .625rem;
@@ -290,7 +301,12 @@ section#precios {
     padding: 1.25rem;
     text-align: justify;
     -webkit-backdrop-filter: blur(1.5px);
-    backdrop-filter: blur(1.5px); }
+    backdrop-filter: blur(1.5px);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
     section#precios article div h3 {
       text-align: center;
       text-transform: uppercase;
@@ -321,15 +337,21 @@ section#contacto {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1.25rem; }
+    gap: 1.25rem;
+    height: 21.875rem; }
     section#contacto .gridcontacto .texto {
       width: 50%;
       background: rgba(21, 21, 21, 0.5);
       color: #ddd;
       font-family: 'Poppins';
-      font-size: .875rem;
       padding: 1.25rem;
-      text-align: justify; }
+      text-align: justify;
+      height: 100%;
+      font-size: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px; }
       section#contacto .gridcontacto .texto img {
         width: 10%; }
       section#contacto .gridcontacto .texto span {
@@ -348,7 +370,8 @@ section#contacto {
       display: flex;
       justify-content: center;
       background: rgba(21, 21, 21, 0.5);
-      padding: 1.25rem; }
+      padding: 1.25rem;
+      height: 100%; }
       section#contacto .gridcontacto .formulario form {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -356,14 +379,19 @@ section#contacto {
         gap: 15px;
         grid-template-areas: "nombre mail" "texto texto" "boton boton"; }
         section#contacto .gridcontacto .formulario form #name {
-          grid-area: nombre; }
+          grid-area: nombre;
+          display: flex;
+          align-items: center; }
           section#contacto .gridcontacto .formulario form #name label {
             color: #ddd;
             font-family: 'share tech mono';
             text-transform: uppercase;
             font-size: .75rem; }
         section#contacto .gridcontacto .formulario form #mail {
-          grid-area: mail; }
+          grid-area: mail;
+          display: flex;
+          align-items: center;
+          justify-content: end; }
           section#contacto .gridcontacto .formulario form #mail label {
             color: #ddd;
             font-family: 'share tech mono';
@@ -382,23 +410,26 @@ section#contacto {
             font-size: 12px;
             padding: 2px;
             background: #ddd;
-            border: none; }
+            border: none;
+            cursor: pointer; }
         section#contacto .gridcontacto .formulario form input {
-          background: #6fcbda;
+          background: #ddd;
           border: none;
           font-family: 'Poppins';
           font-size: 12px;
           padding: 0px 5px; }
         section#contacto .gridcontacto .formulario form textarea {
           width: 37.5rem !important;
-          background: #6fcbda;
+          background: #ddd;
           border: none;
           font-family: 'Poppins';
-          font-size: 12px; }
+          font-size: 12px;
+          height: 100%;
+          padding: .625rem; }
 
 section#nosotros {
   min-height: 90vh;
-  padding-bottom: 6.25rem; }
+  padding: 12.5rem 5%; }
   section#nosotros .gridnosotros {
     display: flex;
     flex-direction: column; }
@@ -409,7 +440,7 @@ section#nosotros {
       flex-direction: row;
       gap: 1.25rem;
       justify-content: center;
-      align-items: center; }
+      align-items: stretch; }
       section#nosotros .gridnosotros .caja1 #texto, section#nosotros .gridnosotros .caja2 #texto {
         width: 30%;
         background: rgba(21, 21, 21, 0.5);
@@ -422,11 +453,16 @@ section#nosotros {
         backdrop-filter: blur(1.5px); }
       section#nosotros .gridnosotros .caja1 #imagen, section#nosotros .gridnosotros .caja2 #imagen {
         width: 30%;
-        max-width: 500px;
-        max-height: 333px;
+        display: flex;
+        align-items: stretch;
         opacity: .9;
         overflow: hidden;
         outline: 2px solid #ddd; }
+        section#nosotros .gridnosotros .caja1 #imagen > img, section#nosotros .gridnosotros .caja2 #imagen > img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          display: block; }
 
 @media (max-width: 1440px) {
   header {
@@ -504,14 +540,16 @@ section#nosotros {
   footer {
     max-width: 1024px; }
   section.caja1 {
-    flex-direction: column !important; }
+    flex-direction: column !important;
+    align-items: center !important; }
   section.caja2 {
     flex-direction: column-reverse !important;
+    align-items: center !important;
     margin-top: 1.25rem; }
   .caja1 #texto, .caja2 #texto {
-    width: 70% !important; }
+    width: 90% !important; }
   article#imagen {
-    width: 50% !important; } }
+    width: 90% !important; } }
 
 @media (min-width: 992px) {
   .gridtable {

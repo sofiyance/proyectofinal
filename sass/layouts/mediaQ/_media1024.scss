@@ -70,15 +70,17 @@
     }
     section.caja1 {
         flex-direction: column!important;
+        align-items: center!important;
     }
     section.caja2 {
         flex-direction: column-reverse!important;
+        align-items: center!important;
         margin-top: 1.25rem;
     }
     .caja1 #texto, .caja2 #texto {
-        width: 70%!important;
+        width: 90%!important;
     }
     article#imagen {
-        width: 50%!important;
+        width: 90%!important;
     }
 }

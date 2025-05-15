@@ -11,9 +11,15 @@ input, button, textarea, select {
     font: inherit;
 }
 body {
-    background-color: map-get($colores,claro);
+    background-color: #525252;
+    background-image: url(../../assets/bodybckgrd.jpg);
     min-height: 100vh;
     position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: exclusion;
     a {
         text-decoration: none;
         cursor: crosshair;

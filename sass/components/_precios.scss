@@ -1,5 +1,6 @@
 section#precios {
     min-height: 90vh;
+    padding: 12.5rem 5%;
     .gridtable {
         gap: 1.25rem 3.125rem;
         padding: .625rem;
@@ -20,6 +21,11 @@ section#precios {
         text-align: justify;
         -webkit-backdrop-filter: blur(1.5px);
         backdrop-filter: blur(1.5px);
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         div {
             h3 {
                 text-align: center;
